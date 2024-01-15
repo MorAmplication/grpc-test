@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+                 package work;
+service WorkService {
+ rpc createWork (WorkCreateInput) returns (Work) {}
+rpc works (findManyParams) returns (stream Work) {}
+rpc work (WorkWhereUniqueInput) returns (Work) {}
+rpc updateWork (WorkUpdateInput) returns (Work) {}
+rpc deleteWork (WorkWhereUniqueInput) returns (Work) {} 
+ }
+message WorkCreateInput {
+string createdAt = 1;
+string id = 2;
+string name = 3;
+string updatedAt = 4;
+};
+message Work {
+string createdAt = 1;
+string id = 2;
+string name = 3;
+string updatedAt = 4;
+};
+message WorkWhereUniqueInput {
+string createdAt = 1;
+string id = 2;
+string name = 3;
+string updatedAt = 4;
+};
+message WorkUpdateInput {
+string createdAt = 1;
+string id = 2;
+string name = 3;
+string updatedAt = 4;
+};
+message findManyParams {
+
+};
